@@ -1,1 +1,9 @@
-.vagrant/
+.viminfo
+.bash_history
+.vagrant
+post-rundockergitlab.sh
+rundockernode.sh
+builddockerimage.sh
+post-rundockergitlab.sh
+.config
+Dockerfile

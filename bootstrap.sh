@@ -28,7 +28,7 @@ echo "* [5]: INSTALLATION DE ANSIBLE *"
 echo "********************************"
 apt-get install -y python software-properties-common ansible
 sed -i '/\[defaults\]/a interpreter_python = auto_legacy_silent' /etc/ansible/ansible.cfg
-sed -i 's/#allow_world_readable_tmpfiles = False/allow_world_readable_tmpfiles = True/g' /etc/ansible/ansible.cfg
+#sed -i 's/#allow_world_readable_tmpfiles = False/allow_world_readable_tmpfiles = True/g' /etc/ansible/ansible.cfg
 
 echo "*******************************"
 echo "* [6]: INSTALLATION DE DOCKER *"

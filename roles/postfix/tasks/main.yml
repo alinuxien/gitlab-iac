@@ -1,0 +1,6 @@
+---
+- name: "Installation de Postfix"
+  apt:
+            name: "postfix"
+            state: present
+

@@ -1,0 +1,8 @@
+---
+- name : "Installation du paquet GitLab Entreprise Edition"
+  apt:
+          name: "gitlab-ee"
+          state: present
+          update-cache: yes
+  environment:
+          EXTERNAL_URL: "http://gitlab.local"
