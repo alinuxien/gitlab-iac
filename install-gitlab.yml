@@ -1,6 +1,6 @@
 ---
 - name: "Installation de GitLab"
-  hosts: gitlab
+  hosts: localhost 
   roles: 
     - dependances
     - postfix
