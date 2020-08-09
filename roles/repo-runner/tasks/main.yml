@@ -1,0 +1,4 @@
+---
+- name: "Ajout du dépot GitLab"
+  raw: "curl https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash "
+

@@ -5,4 +5,4 @@
           state: present
           update-cache: yes
   environment:
-          EXTERNAL_URL: "http://gitlab"
+          EXTERNAL_URL: "http://gitlab.local"

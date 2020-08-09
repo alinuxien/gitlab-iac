@@ -1,0 +1,7 @@
+---
+- name: "Installation d'un GitLab Runner"
+  hosts: localhost 
+  roles: 
+    - repo-runner
+    - gitlab-runner
+

@@ -1,0 +1,6 @@
+---
+- name : "Installation du paquet GitLab Runner"
+  apt:
+          name: "gitlab-runner"
+          state: present
+
