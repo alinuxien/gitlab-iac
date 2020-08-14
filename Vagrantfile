@@ -10,8 +10,8 @@ Vagrant.configure("2") do |config|
         config.vm.network "forwarded_port", guest: 443, host: 4443
 	config.vm.provider "virtualbox" do |v|
 		v.name = "gitlab"
-                v.memory = 16392 
-                v.cpus = 12
+                v.memory = 8196 
+                v.cpus = 8
 	end
 	config.vm.provision :shell, path: "bootstrap.sh"
 end
