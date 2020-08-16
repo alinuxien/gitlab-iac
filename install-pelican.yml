@@ -1,0 +1,7 @@
+---
+- name: "Installation de Pelican"
+  hosts: localhost
+  roles:
+          - pelican-dep
+          - pelican
+

@@ -1,0 +1,7 @@
+---
+- name: "Installation de Pelican et Markdown"
+  pip:
+          name:
+                  - pelican
+                  - Markdown
+

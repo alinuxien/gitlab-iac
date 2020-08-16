@@ -1,0 +1,6 @@
+---
+- name: "Installation des dépendances requises pour Pelican"
+  apt:
+          name: "python-pip"
+          state: present
+

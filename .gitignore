@@ -9,3 +9,5 @@ post-rundockergitlab.sh
 Dockerfile
 builds
 ssl-keys
+pelican/pelicanconf.pyc
+pelican/.git
