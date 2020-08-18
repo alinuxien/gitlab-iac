@@ -1,0 +1,7 @@
+---
+- name: "Gestion de l'erreur RND de OpenSSL"
+  lineinfile:
+          path: /etc/ssl/openssl.cnf
+          regexp: 'RANDFILE[\t]*[\s]*= \$ENV::HOME\/\.rnd'
+          line: '#RANDFILE               = $ENV::HOME/.rnd'
+

@@ -1,0 +1,6 @@
+---
+- name: "Modification de l'url externe pour https"
+  lineinfile:
+          path: /etc/gitlab/gitlab.rb
+          regexp: 'external_url ''http:\/\/gitlab\.example\.com'''
+          line: 'external_url ''https://gitlab.example.com:4443''' 

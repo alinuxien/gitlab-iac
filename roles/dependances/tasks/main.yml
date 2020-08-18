@@ -1,7 +1,7 @@
 ---
 - name: "Installation des dépendances requises pour GitLab"
   apt:
-            name: "curl, openssh-server, ca-certificates"
+            name: "curl, openssh-server, ca-certificates, python-openssl"
             state: present
             update-cache: yes
 

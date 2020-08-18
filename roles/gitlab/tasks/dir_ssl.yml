@@ -1,0 +1,7 @@
+---
+- name: "Création du dossier ssl"
+  file:
+          path: /etc/gitlab/ssl
+          state: directory
+          mode: '0755'
+

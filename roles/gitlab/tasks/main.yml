@@ -1,8 +1,19 @@
 ---
-- name : "Installation du paquet GitLab Entreprise Edition"
+- name: "Installation du paquet GitLab Entreprise Edition"
   apt:
           name: "gitlab-ee"
           state: present
           update-cache: yes
   environment:
-          EXTERNAL_URL: "http://gitlab.local"
+          EXTERNAL_URL: "http://gitlab.example.com"
+
+- include_tasks: "{{ item }}"
+  with_items:
+          - dir_ssl.yml
+          - prepare_openssl_conf.yml
+          - priv_key.yml
+          - cert_request.yml
+          - cert.yml
+          - p12.yml
+          - external_url.yml
+          - reconfigure.yml
