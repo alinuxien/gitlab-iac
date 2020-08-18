@@ -1,13 +1,9 @@
 .viminfo
 .bash_history
 .vagrant
-post-rundockergitlab.sh
-rundockernode.sh
-builddockerimage.sh
-post-rundockergitlab.sh
 .config
-Dockerfile
-builds
 ssl-keys
-pelican/pelicanconf.pyc
-pelican/.git
+pelican
+builds
+config.toml
+
