@@ -1,8 +1,0 @@
----
-- name: Generation d'un certificat OpenSSL Self Signed
-  openssl_certificate:
-          path: /etc/gitlab/ssl/gitlab.example.com.crt
-          privatekey_path: /etc/gitlab/ssl/gitlab.example.com.key
-          csr_path: /etc/gitlab/ssl/gitlab.example.com.csr
-          provider: selfsigned
-

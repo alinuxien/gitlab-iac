@@ -1,6 +1,0 @@
----
-- name: Generation d'une clé privée 
-  openssl_privatekey:
-          path: /etc/gitlab/ssl/gitlab.example.com.key
-          size: 2048
-                

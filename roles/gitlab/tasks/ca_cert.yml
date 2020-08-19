@@ -1,0 +1,5 @@
+---
+- name: Generation d'un certificat auto-signé pour le nouveau CA
+  shell:
+          openssl req -x509 -new -nodes -key /etc/gitlab/ssl/alinuxien.ca.key -sha256 -days 3650 -out /vagrant/alinuxien-ca.cer -subj "/O=Alinuxien/CN=Alinuxien CA - Certification authority/OU=Alinuxien CA - Certification authority"
+

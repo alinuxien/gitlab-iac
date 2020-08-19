@@ -11,9 +11,9 @@
   with_items:
           - dir_ssl.yml
           - prepare_openssl_conf.yml
-          - priv_key.yml
-          - cert_request.yml
-          - cert.yml
-          - p12.yml
+          - ca_key.yml
+          - ca_cert.yml
+          - srv_priv_key_and_cert_req.yml
+          - srv_cert.yml
           - external_url.yml
           - reconfigure.yml
