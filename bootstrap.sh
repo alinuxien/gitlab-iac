@@ -18,10 +18,10 @@ echo "* [3]: MISE A JOUR DE LA LISTE DES PAQUETS DISPONIBLES *"
 echo "********************************************************"
 apt-get update
 
-echo "*************************************"
-echo "* [4]: INSTALLATION DE VIM ET XCLIP *"
-echo "*************************************"
-apt-get install -y vim xclip
+echo "****************************"
+echo "* [4]: INSTALLATION DE VIM *"
+echo "****************************"
+apt-get install -y vim
 
 echo "********************************"
 echo "* [5]: INSTALLATION DE ANSIBLE *"
