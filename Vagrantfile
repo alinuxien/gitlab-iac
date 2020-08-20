@@ -12,6 +12,9 @@ Vagrant.configure("2") do |config|
 		v.name = "gitlab"
                 v.memory = 8196 
                 v.cpus = 8
+		v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+		v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+	        v.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 10000 ]
 	end
 	config.vm.provision :shell, path: "bootstrap.sh"
 end
