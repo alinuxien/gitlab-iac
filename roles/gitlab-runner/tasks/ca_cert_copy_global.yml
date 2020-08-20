@@ -1,0 +1,5 @@
+---
+- name: Ajout du certificat CA à la VM
+  shell:
+          cat /vagrant/alinuxien-ca.cer >> /etc/ssl/certs/ca-certificates.crt
+

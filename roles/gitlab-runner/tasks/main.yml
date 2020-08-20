@@ -1,6 +1,13 @@
 ---
-- name : "Installation du paquet GitLab Runner"
+- name: "Installation du paquet GitLab Runner"
   apt:
           name: "gitlab-runner"
           state: present
+
+- include_tasks: "{{ item }}" 
+  with_items:
+          - dir_certs.yml
+          - cert_copy.yml
+          - ca_cert_copy.yml
+          - ca_cert_copy_global.yml
 

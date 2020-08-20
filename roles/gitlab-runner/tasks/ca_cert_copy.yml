@@ -1,0 +1,6 @@
+---
+- name: "Copie du certificat CA pour le runner"
+  copy:
+          src: /vagrant/alinuxien-ca.cer
+          dest: /etc/gitlab-runner/certs/ca.crt
+          remote_src: yes

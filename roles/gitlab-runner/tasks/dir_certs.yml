@@ -1,0 +1,7 @@
+---
+- name: "Création du dossier certs"
+  file:
+          path: /etc/gitlab-runner/certs
+          state: directory
+          mode: '0755'
+
