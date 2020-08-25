@@ -28,13 +28,13 @@ Ce projet se base sur un autre projet fait le mois dernier et dédié à Vagrant
 ## Comment ça s'utilise ?
 Tout se passe au départ dans un terminal :
 
+- faites une copie locale de ce dépot :  `git clone https://github.com/alinuxien/vm-gitlab-ansible.git`
+- allez dans le dossier téléchargé : `cd vm-gitlab-ansible`
 - en premier lieu, ajustez la puissance allouée à la VM. Je conseille d'allouer la moitié de vos threads cpu et au moins 2048 Mo de RAM ( gardez-en pour pouvoir utiliser la machine hôte ). Editez le fichier `Vagrantfile`: par défaut, j'ai mis `v.memory = 4096` ( suffisant ) et `v.cpus = 4` ( 6 ou 8 c'est encore mieux ).
 - ajoutez le nom d'hôte `gitlab.example.com` à la boucle locale de votre machine hôte, pour pouvoir accéder à GitLab avec une jolie adresse : `https://gitlab.example.com:4443`
 - `sudo vim /etc/hosts` 
 - sur la ligne contenant `127.0.0.1 localhost`, ajoutez gitlab.example.com ( au final ça donne `127.0.0.1	gitlab.example.com localhost` )
 - enregistrez et quittez ce fichier
-- faites une copie locale de ce dépot :  `git clone https://github.com/alinuxien/vm-gitlab-ansible.git`
-- allez dans le dossier téléchargé : `cd vm-gitlab-ansible`
 - lancez la construction de la VM : `vagrant up`
 - une fois terminé, vous pouvez vous connecter dessus : `vagrant ssh`
 - dans la VM, allez dans le dossier `/vagrant` ( qui est mappé sur votre dossier de travail `vm-gitlab-ansible` ) : `cd /vagrant`
