@@ -4,4 +4,6 @@
           name:
                   - pelican
                   - Markdown
+          executable: pip3
+
 
