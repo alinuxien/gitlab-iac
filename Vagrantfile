@@ -10,8 +10,8 @@ Vagrant.configure("2") do |config|
         config.vm.network "forwarded_port", guest: 4443, host: 4443
 	config.vm.provider "virtualbox" do |v|
 		v.name = "gitlab"
-                v.memory = 8196 
-                v.cpus = 8
+                v.memory = 4096 
+                v.cpus = 4
 		v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
 		v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
 	        v.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 10000 ]
