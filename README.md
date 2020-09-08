@@ -12,6 +12,9 @@ Ensuite, des scripts et roles Ansible permettent l'installation et la configurat
 
 Ce projet se base sur un autre projet fait le mois dernier et dédié à Vagrant, [disponible ici](https://github.com/alinuxien/Vagrant)
 
+## Ca ressemble à quoi ?
+![Vue d'ensemble du Processus](https://github.com/alinuxien/vm-gitlab-ansible/raw/master/process%20projet%204.png)
+
 ## Contenu ?
 - Un `Vangrantfile` et un script `bootstrap.sh` pour la VM.
 - Le fichier `inventaire.ini` sert au bon fonctionnement local de Ansible
