@@ -1,6 +1,9 @@
 # Bienvenue sur mon projet GitLab CI/CD Infrastructure As Code
 Il s'agit d'un projet réalisé en Mai 2021 dans le cadre de ma formation "Expert DevOps" chez OpenClassRooms.
 
+## AVERTISSEMENT
+Il s'agit seulement d'un projet d'étude, à NE PAS UTILISER EN PROD  !!!
+
 ## Ca fait quoi ?
 Ca crée un serveur virtuel GitLab, dont le but ici est d'exploiter les fonctionnalités d'intégration et déploiement continu ( CI/CD ) pour, développer de l'Infrastructure As Code avec Terraform et Ansible.
 
