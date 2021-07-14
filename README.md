@@ -1,16 +1,16 @@
-# Bienvenue sur mon projet GitLab CI/CD
-Il s'agit d'un projet réalisé en Aout 2020 dans le cadre de ma formation "Expert DevOps" chez OpenClassRooms.
+# Bienvenue sur mon projet GitLab CI/CD Orienté Infrastructure As Code
+Il s'agit d'un projet réalisé en Mai 2021 dans le cadre de ma formation "Expert DevOps" chez OpenClassRooms.
 
 ## Ca fait quoi ?
-Ca crée un serveur virtuel GitLab, dont le but ici est d'exploiter les fonctionnalités d'intégration et déploiement continu ( CI/CD ) pour, par exemple, générer automatiquement les pages d'un site web statique à l'aide de [Pelican](https://docs.getpelican.com/en/4.5.0/index.html).
+Ca crée un serveur virtuel GitLab, dont le but ici est d'exploiter les fonctionnalités d'intégration et déploiement continu ( CI/CD ) pour, développer de l'Infrastructure As Code avec Terraform et Ansible.
 
-A l'usage, vous écrivez les articles de votre blog en MarkDown, et les pages html seront générées et déposées sur le dépôt GitHub défini, consultables en ligne sur GitHub Pages ( [dans mon cas ici](https://alinuxien.github.io/pelican/) ) 
+A l'usage, on va pouvoir créer des projets équipés de pipeline de CI/CD, qui auront accès à Runner et une Container Registry, sécurisés, ainsi que quelques autres outils...
 
 Pour cela, nous allons créer une VM Virtual Box à l'aide de Vagrant, contenant une distribution Linux Ubuntu et les outils nécessaires.
 
-Ensuite, des scripts et roles Ansible permettent l'installation et la configuration de GitLab et de GitLab Runner.
+Ensuite, des scripts et roles Ansible permettent l'installation et la configuration de GitLab, GitLab Runner, et GitLab Container Registry.
 
-Ce projet se base sur un autre projet fait le mois dernier et dédié à Vagrant, [disponible ici](https://github.com/alinuxien/Vagrant)
+Ce projet est une évolution de mon précédent projet basé sur GitLab [disponible ici](https://github.com/alinuxien/vm-gitlab-ansible)
 
 ## Ca ressemble à quoi ?
 ![Vue d'ensemble du Processus](https://github.com/alinuxien/gitlab-iac/blob/700a4c57805661207c75fdd7023de712561e9cab/gitlab%20iac.png)
