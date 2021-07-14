@@ -71,7 +71,7 @@ Tout se passe au départ dans un terminal :
 - et on va recharger la configuration du daemon Docker : `sudo systemctl daemon-reload` puis `sudo systemctl restart docker`
 
 
-Et voilà! L'environnement de travail est prêt, avec GitLab sécurisé accessible depuis un navigateur web, équipé d'un Runner et d'une Container Registry Sécurisés, prêt à exécuter des Pipelines, créer et stocker des Containers Docker, faire de l'IAC avec Ansible et Terraform, ...
+Et voilà! L'environnement de travail est prêt, avec GitLab sécurisé accessible depuis un navigateur web, équipé d'un Runner et d'une Container Registry sécurisés, prêt à exécuter des Pipelines, créer et stocker des Containers Docker, faire de l'IAC avec Ansible et Terraform, ...
 
 # Et après ?
 Pour tester cet environnement, je vous propose la suite du projet, qui consiste à créer un Cluster Kubernetes K8S from scratch, sur AWS, 
