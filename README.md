@@ -7,7 +7,7 @@ Il s'agit seulement d'un projet d'étude, à NE PAS UTILISER EN PROD  !!!
 ## Ca fait quoi ?
 Ca crée un serveur virtuel GitLab, dont le but ici est d'exploiter les fonctionnalités d'intégration et déploiement continu ( CI/CD ) pour, développer de l'Infrastructure As Code avec Terraform et Ansible.
 
-A l'usage, on va pouvoir créer des projets équipés de pipeline de CI/CD, qui auront accès à Runner et une Container Registry, sécurisés, ainsi que quelques autres outils...
+A l'usage, on va pouvoir créer des projets équipés de pipeline de CI/CD, qui auront accès à un Runner et une Container Registry, sécurisés, ainsi que quelques autres outils...
 
 Pour cela, nous allons créer une VM Virtual Box à l'aide de Vagrant, contenant une distribution Linux Ubuntu et les outils nécessaires.
 
