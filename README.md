@@ -60,7 +60,7 @@ Tout se passe au départ dans un terminal :
 - de retour le navigateur web, allez vérifier que le runner est apparu dans la liste
 - "délockez" le runner : case `Lock to current projects` *décochée* 
 - de retour dans le terminal, installez la Container Registry intégrée à GitLab : `ansible-playbook -i inventaire.ini install-gitlab-registry.yml`
-- ajoutez les noms d'hôte `mygta.com` et `registry.mygta.com` dans /etc/hosts ( toujours dans la VM ) : au final ça donne `127.0.2.1 registry.mygta.com mygta.com mygta`
+- ajoutez les noms d'hôte `mygta`, `mygta.com` et `registry.mygta.com` dans /etc/hosts ( toujours dans la VM ) : au final ça donne `127.0.2.1 registry.mygta.com mygta.com mygta`
 - on va autoriser le daemon Docker à utiliser notre nouvelle Registry. Pour cela, créez un fichier /etc/docker/daemon.json, avec dedans :
 { 
   "insecure-registries" : ["registry.mygta.com"] 
