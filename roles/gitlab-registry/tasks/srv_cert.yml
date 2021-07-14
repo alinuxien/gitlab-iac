@@ -1,0 +1,7 @@
+---
+- name: Generation d'un certificat pour le serveur signé par le nouveau CA de la Registry
+  shell:
+          openssl x509 -req -in /etc/gitlab/ssl/registry.mygta.com.csr -CAkey /etc/gitlab/ssl/alinuxien-registry.ca.key -CA /vagrant/alinuxien-registry-ca.cer -CAcreateserial -CAserial /etc/gitlab/ssl/registry.mygta.com.serial -out /etc/gitlab/ssl/registry.mygta.com.crt -days 3650 -sha256 -extfile /vagrant/registry.mygta.com.sslv3.txt
+
+
+

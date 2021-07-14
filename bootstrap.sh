@@ -12,6 +12,8 @@ echo "*************************************"
 apt-add-repository --yes --update ppa:ansible/ansible
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 apt-add-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 
 echo "********************************************************"
 echo "* [3]: MISE A JOUR DE LA LISTE DES PAQUETS DISPONIBLES *"
@@ -36,9 +38,37 @@ echo "*******************************"
 apt-get install -y apt-transport-https ca-certificates curl gnupg-agent docker-ce docker-ce-cli containerd.io
 usermod -aG docker vagrant
 
+echo "**********************************"
+echo "* [7]: INSTALLATION DE TERRAFORM *"
+echo "**********************************"
+apt-get install -y terraform
+sudo -u vagrant terraform -install-autocomplete
+
+echo "**************************************"
+echo "* [8]: INSTALLATION DE AMAZON CLI V2 *"
+echo "**************************************"
+apt-get install -y unzip
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+./aws/install
+
 echo "*************************************************"
-echo "* [7]: INSTALLATION DE TREE ET VIDANGE DU CACHE *"
+echo "* [9]: INSTALLATION DE TREE ET VIDANGE DU CACHE *"
 echo "*************************************************"
 apt-get install -y tree
 apt-get clean -y
+
+echo "*****************************************************************************"
+echo "* [10]: INSTALLATION DES OUTILS REQUIS POUR DEPLOYER K8S : CFSSL ET KUBECTL *"
+echo "*****************************************************************************"
+apt-get install -y golang-cfssl
+wget https://storage.googleapis.com/kubernetes-release/release/v1.21.0/bin/linux/amd64/kubectl
+chmod +x kubectl
+mv kubectl /usr/local/bin/
+
+echo "********************************"
+echo "* [11]: INSTALLATION DE PACKER *"
+echo "********************************"
+apt-get install -y packer
+
 

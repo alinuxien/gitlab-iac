@@ -1,0 +1,15 @@
+---
+- name: "Definition de l'url externe du registry"
+  lineinfile:
+          path: /etc/gitlab/gitlab.rb
+          regexp: '^#\t*\s*registry_external_url\t*\s*''https:\/\/registry\.example\.com''\t*\s*'
+          line: 'registry_external_url ''https://registry.mygta.com''' 
+
+- include_tasks: "{{ item }}"
+  with_items:
+           - ca_key.yml
+           - ca_cert.yml
+           - srv_priv_key_and_cert_req.yml
+           - srv_cert.yml
+           - reconfigure.yml
+

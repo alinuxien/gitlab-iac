@@ -1,0 +1,5 @@
+---
+- name: "Lancement du gitlab-ctl reconfigure"
+  command: >
+          gitlab-ctl reconfigure
+  failed_when: false

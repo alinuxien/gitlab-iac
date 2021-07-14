@@ -1,6 +1,6 @@
 ---
 - name: Generation d'un certificat pour le serveur signé par le nouveau CA
   shell:
-          openssl x509 -req -in /etc/gitlab/ssl/gitlab.example.com.csr -CAkey /etc/gitlab/ssl/alinuxien.ca.key -CA /vagrant/alinuxien-ca.cer -CAcreateserial -CAserial /etc/gitlab/ssl/gitlab.example.com.serial -out /etc/gitlab/ssl/gitlab.example.com.crt -days 3650 -sha256 -extfile /vagrant/gitlab.example.com.sslv3.txt
+          openssl x509 -req -in /etc/gitlab/ssl/mygta.com.csr -CAkey /etc/gitlab/ssl/alinuxien.ca.key -CA /vagrant/alinuxien-ca.cer -CAcreateserial -CAserial /etc/gitlab/ssl/mygta.com.serial -out /etc/gitlab/ssl/mygta.com.crt -days 3650 -sha256 -extfile /vagrant/mygta.com.sslv3.txt
 
 

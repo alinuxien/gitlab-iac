@@ -1,0 +1,4 @@
+---
+- name: Generation d'une clé privée et d'une demande de certificat pour le serveur de la Registry
+  shell:
+          openssl req -new -sha256 -nodes -out /etc/gitlab/ssl/registry.mygta.com.csr -newkey rsa:2048 -keyout /etc/gitlab/ssl/registry.mygta.com.key -subj "/O=Alinuxien/CN=registry.mygta.com"

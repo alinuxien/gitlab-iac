@@ -1,0 +1,5 @@
+---
+- name: Generation d'une clé privée pour le nouveau CA de la Registry
+  openssl_privatekey:
+          path: /etc/gitlab/ssl/alinuxien-registry.ca.key
+          size: 2048

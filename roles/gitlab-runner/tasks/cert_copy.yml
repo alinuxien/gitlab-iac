@@ -1,6 +1,6 @@
 ---
 - name: "Copie du certificat serveur GitLab pour les runners"
   copy:
-          src: /etc/gitlab/ssl/gitlab.example.com.crt
-          dest: /etc/gitlab-runner/certs/gitlab.example.com.crt
+          src: /etc/gitlab/ssl/mygta.com.crt
+          dest: /etc/gitlab-runner/certs/mygta.com.crt
           remote_src: yes

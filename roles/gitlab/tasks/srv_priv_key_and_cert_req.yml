@@ -1,5 +1,5 @@
 ---
 - name: Generation d'une clé privée et d'une demande de certificat pour le serveur
   shell:
-          openssl req -new -sha256 -nodes -out /etc/gitlab/ssl/gitlab.example.com.csr -newkey rsa:2048 -keyout /etc/gitlab/ssl/gitlab.example.com.key -subj "/O=Alinuxien/CN=gitlab.example.com"
+          openssl req -new -sha256 -nodes -out /etc/gitlab/ssl/mygta.com.csr -newkey rsa:2048 -keyout /etc/gitlab/ssl/mygta.com.key -subj "/O=Alinuxien/CN=mygta.com"
 
