@@ -16,7 +16,7 @@ Ensuite, des scripts et roles Ansible permettent l'installation et la configurat
 Ce projet est une évolution de mon précédent projet basé sur GitLab [disponible ici](https://github.com/alinuxien/vm-gitlab-ansible)
 
 ## Ca ressemble à quoi ?
-![Vue d'ensemble du Processus](https://github.com/alinuxien/gitlab-iac/blob/700a4c57805661207c75fdd7023de712561e9cab/gitlab%20iac.png)
+![Vue d'ensemble des Composants](https://github.com/alinuxien/gitlab-iac/blob/700a4c57805661207c75fdd7023de712561e9cab/gitlab%20iac.png)
 
 ## Contenu ?
 - Un `Vangrantfile` et un script `bootstrap.sh` pour la VM et son provisionning initial.
