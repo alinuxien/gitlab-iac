@@ -50,8 +50,11 @@ Tout se passe au départ dans un terminal :
 - la première configuration peut prendre 5 à 10 minutes, pendant lesquelles le navigateur affiche une erreur `Délai de réponse trop long` ou `502 Bad Gateway` servie par GitLab : c'est normal, il suffit de patienter.
 - ensuite, il y aura un avertissement de sécurité, traité dans le point suivant
 - importez le certificat d'autorité racine ( Root CA ) dans le navigateur / la machine hote ( selon navigateur et OS ) comme digne de confiance. Ce certificat a été généré par Ansible et est maintenant disponible dans votre dossier de travail sous le nom `alinuxien-ca.cer`. J'ai testé cela sur Chrome sur Linux et MacOS, et au final, le petit cadenas à coté de l'adresse confirme que le site est sécurisé.
-- une fois passé cette étape de sécurisation, sur votre site GitLab, vous pouvez définir un mot de passe ( pour l'utilisateur `root` ) et ensuite vous connecter en tant que `root`.
-- allez dans `Configure GitLab` en bas, puis `Runners` dans le menu à gauche ( sous `Overview` )
+- une fois passé cette étape de sécurisation, vous allez devoir changer le mot de passe root défini en provisoire pendant l'installation
+- pour récupérer le mot de passe provisoire, toujours dans un terminal de la VM : `sudo cat /etc/gitlab/initial_root_password` ( attention, valable 24 heures )
+- dans le navigateur web, sur gitlab ( `https://mygta.com:4443` ), vous pouvez maintenant vous connecter en tant que root avec mot de passe provisoire
+- vous devez changer le mot de passe de `root` tout de suite : menu Admin -> Users -> Admnistrator -> Edit
+- une fois connecté avec le nouveau mot de passe, allez dans le menu Admin -> Runners ( sous `Overview` )
 - sur la droite, vous voyez l'`url` et le `token` qui vont nous servir à pour enregistrer le premier runner
 - dans le terminal, vous devez installer GitLab Runner avec la commande : `ansible-playbook -i inventaire.ini install-gitlab-runner.yml`
 - une fois terminé, vous pouvez enregistrer un runner : `sudo gitlab-runner register`, renseigner url et token, nom du runner au choix ( `shell` ? ), et surtout de type `shell`
