@@ -57,7 +57,7 @@ Tout se passe au départ dans un terminal :
 - une fois connecté avec le nouveau mot de passe, allez dans le menu Admin -> Runners ( sous `Overview` )
 - sur la droite, vous voyez l'`url` et le `token` qui vont nous servir à pour enregistrer le premier runner
 - dans le terminal, vous devez installer GitLab Runner avec la commande : `ansible-playbook -i inventaire.ini install-gitlab-runner.yml`
-- une fois terminé, vous pouvez enregistrer un runner : `sudo gitlab-runner register`, renseigner url et token, nom du runner au choix ( `shell` ? ), et surtout de type `shell`
+- une fois terminé, vous pouvez enregistrer un runner : `sudo gitlab-runner register`, renseigner url et token, nom du runner au choix ( `shell` ? ), tag `shell`   ( pour pouvoir utiliser les projets suivants simplement ), et surtout de type `shell`
 - pour que le Runner puisque accéder correctement à l'instance GitLab, il faut récupérer l'ip de l'instance ( ifconfig ), éditer le fichier `/etc/gitlab-runner/config.toml` pour y ajouter la ligne `extra_hosts = ["mygta.com:10.0.2.15"]` ( `10.0.2.15` étant l'ip de l'instance GitLab récupérée avec ifconfig ), juste après la ligne `executor = "shell"` ( ou après `tls_verify = false` pour un Runner avec un type d'executor autre que Shell ), et enfin relancer le GitLab-Runner : `sudo gitlab-runner restart`
 - tant qu'on y est, on va permettre au Runner d'accéder au daemon Docker : `sudo usermod -aG docker gitlab-runner`
 - de retour le navigateur web, allez vérifier que le runner est apparu dans la liste
